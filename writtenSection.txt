@@ -2,27 +2,51 @@ Answer each question in a written format
 
 1. What does semantic HTML mean?
 
+The word "semantic" refers to the meaning of words and symbols. If something is "semantic," it usually means that we can easily make sense of the meaning. In code and programming languages, the syntax and the words we use can have programmatic meaning without being easily interpretable in human language. Code is referred to as "semantic" when the purpose and function of the code can be easily understood in human language.  One of the goals of HTML is to make the element names and attributes as semantic as possible. This is illustrated by element names such as "<p>" for "paragraph," or "<nav>" for navigation components. 
+
 2. What is the box model?
+
+The "box model" refers to the manner in which an HTML element is positioned relative to its container and its content. In HTML, elements can be represented as rectangular boxes. Each box has a "margin", which separates the sides of the rectangle from surrounding (or outer) elements, and "padding", which separates sides of the rectangle from inner elements or content. Together, these things comprise the box model.
 
 3. What is the difference between IDs and Classes?
 
+In some respects, IDs and Classes behave similarly. They can both be used to target elements with CSS. In other respects, they are unique. For example, a given element can have multiple associated classes, while it may only have one associated ID. Classes are usually used to give consistent styling to multiple different elements. IDs are usually used to target one specific element on a page.
+
 4. What does the z-index do?
+
+The z-index of an element determines how it is layered or stacked relative to other overlapping elements. An element with a higher integer value for its z-index will always appear on top of (or in front of) elements with a lower z-index value.
 
 5. Summarize what the keyword 'this' is used for?
 
+The keyword "this" refers to the context of a function in JavaScript. It refers to an object -- specifically the object where a function is executed. If a function is defined as a method on an object, the keyword "this" refers to the parent object. If a function is defined on the global object (or scope), then the keyword "this" refers to the window object. 
+
 6. What is a callback?
+
+A callback is a function that is passed to another function. The callback, or "inner function" can either be invoked by the outer function, or its definition can be returned by the outer function.  
 
 7. What is a closure?
 
+A "closure" is an inner function that has access to the scope and variables of an outer or enclosing function. A closure is usually returned from the outer function, after which it maintains references to the parent function's variables.
+
 8. How does prototype work?
+
+Every object in JavaScript has a prototype property. This property refers to another object from which it inherits various properties and methods. Since this is a reference, changes to the prototype object are automatically inherited by all objects linked to that prototype. 
 
 9. What is MVC?
 
+MVC is an acronym for "Model, View, Controller." This refers to a framework or architecture used for front-end or user-facing software. The "model" is where data and definitions are stored, to be accessed by both the "view" and the "controller". The "view" is the output generated for users to view or interact with. The "controller" both recieves data and manipulates data in the model. 
+
 10. What is the component lifecycle?
+
+Components are discrete packages of code. Components have various methods that can be used to handle events. These methods are used to contruct and render components for the view. 
 
 11. What is REST?
 
+REST is an architecture used for communicating between clients and servers. a RESTful API can be characterized by certain qualities such as stateless requests. 
+
 12. Name three ways of getting data from the URL using express
+
+Using ExpressJS, data can be passed through a URL using parameters (req.params), queries (req.query), or the body (req.body).
 
 create table users (
 id serial,
@@ -34,8 +58,22 @@ email varchar(255)
 
 -Get all users:
 
+SELECT * FROM USERS;
+
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+
+INSERT INTO USERS
+(name, email)
+VALUES
+('Paul Jones', 'fake@fake.com');
 
 -Update the newly created user's name to 'Bobby Boy':
 
+UPDATE USERS
+SET name = 'Bobby Boy'
+WHERE email = 'fake@fake.com';
+
 -Delete the newly updated user:
+
+DELETE * FROM USERS
+WHERE email = 'fake@fake.com';
